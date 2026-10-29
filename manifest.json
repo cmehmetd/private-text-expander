@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Private Text Expander",
+  "version": "2.0.0",
+  "description": "Gizlilik odaklı, yerel metin genişletici.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Private Text Expander",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
